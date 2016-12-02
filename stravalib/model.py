@@ -45,7 +45,7 @@ class BaseEntity(object):
                 try:
                     setattr(self, k, v)
                 except AttributeError as x:
-                    raise AttributeError("Could not find attribute `{0}` on entity {1}, value: {2!r}.  (Original: {3!r})".format(k, self, v, x))
+                    pass
             else:
                 self.log.warning("No such attribute {0} on entity {1}".format(k, self))
 
